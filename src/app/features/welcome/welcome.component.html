@@ -1,0 +1,38 @@
+<span class="form-inline">
+    <select class="form-control" #selectedLang (change)="switchLang(selectedLang.value)">
+        <option *ngFor="let language of translate.getLangs()" [value]="language" [selected]="language === translate.currentLang">
+            {{ language }}
+        </option>
+    </select>
+</span>
+<div>{{'title' | translate}}</div>
+<hr>
+<div nz-row>
+    <div nz-col nzSpan="24">col-24</div>
+</div>
+<div nz-row>
+    <div nz-col nzSpan="12">col-12</div>
+    <div nz-col nzSpan="12">col-12</div>
+</div>
+<div nz-row>
+    <div nz-col nzSpan="8">col-8</div>
+    <div nz-col nzSpan="8">col-8</div>
+    <div nz-col nzSpan="8">col-8</div>
+</div>
+<div nz-row>
+    <div nz-col nzSpan="6">col-6</div>
+    <div nz-col nzSpan="6">col-6</div>
+    <div nz-col nzSpan="6">col-6</div>
+    <div nz-col nzSpan="6">col-6</div>
+</div>
+<div nz-row>
+    <div nz-col nzSpan="8">col-8</div>
+    <div nz-col nzSpan="8" nzOffset="8">col-8</div>
+</div>
+<hr>
+<div nz-row nzJustify="center" nzAlign="top">
+    <div nz-col nzSpan="4"><p style="height: 50px;">col-4</p></div>
+    <div nz-col nzSpan="4"><p style="height: 100px;">col-4</p></div>
+    <div nz-col nzSpan="4"><p style="height: 75px;">col-4</p></div>
+    <div nz-col nzSpan="4"><p style="height: 100px;">col-4</p></div>
+</div>
